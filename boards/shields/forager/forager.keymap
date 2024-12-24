@@ -83,7 +83,7 @@
 
         base {
             bindings = <
-            &to 3           &kp W           &kp F           &kp P           &bt BT_CLR_ALL                                  &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
+            &to ADJ         &kp W           &kp F           &kp P           &bt BT_CLR_ALL                                  &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
             &kp A           &lhm LCTRL R    &lhm LALT S     &lhm LGUI T     &kp G                                           &kp M           &rhm LGUI N     &rhm LALT E     &rhm LCTRL I    &kp O
             &kp Z           &kp X           &kp C           &kp D           &kp V                                           &kp K           &kp H           AS(COMMA)       AS(DOT)         AS(FSLH)
                                                                             &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
@@ -110,10 +110,10 @@
 
         adj {
             bindings = <
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                  &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &to BASE    &bt BT_CLR_ALL                                  &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
             &studio_unlock  &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &bootloader
-                                                                            &trans          &trans          &trans          &to 1
+                                                                            &trans          &trans          &trans          &to BASE
             >;
         };
     };

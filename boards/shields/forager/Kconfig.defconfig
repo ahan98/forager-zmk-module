@@ -9,10 +9,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_STUDIO
     default y
 
-config ZMK_HID_CONSUMER_REPORT_USAGES_BASIC=y
+config ZMK_HID_CONSUMER_REPORT_USAGES_BASIC
     default y
 
-config BT_CTLR_TX_PWR_PLUS_8=y
+config BT_CTLR_TX_PWR_PLUS_8
     default y
 
 endif
