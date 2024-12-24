@@ -9,6 +9,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_STUDIO
     default y
 
+config ZMK_HID_CONSUMER_REPORT_USAGES_BASIC=y
+    default y
+
+config BT_CTLR_TX_PWR_PLUS_8=y
+    default y
+
 endif
 
 if SHIELD_FORAGER_LEFT || SHIELD_FORAGER_RIGHT
