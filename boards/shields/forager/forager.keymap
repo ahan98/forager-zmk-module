@@ -83,7 +83,7 @@
 
         base {
             bindings = <
-            &to ADJ         &kp W           &kp F           &kp P           &bt BT_CLR_ALL                                  &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
+            &to ADJ         &kp W           &kp F           &out OUT_TOG    &bt BT_CLR_ALL                                  &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
             &kp A           &lhm LCTRL R    &lhm LALT S     &lhm LGUI T     &kp G                                           &kp M           &rhm LGUI N     &rhm LALT E     &rhm LCTRL I    &kp O
             &kp Z           &kp X           &kp C           &kp D           &kp V                                           &kp K           &kp H           AS(COMMA)       AS(DOT)         AS(FSLH)
                                                                             &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
@@ -111,7 +111,7 @@
         adj {
             bindings = <
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &studio_unlock  &bt BT_CLR_ALL                                  &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &studio_unlock  &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
+            &studio_unlock  &kp Z           &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &bootloader
                                                                             &to BASE        &trans          &trans          &to BASE
             >;
