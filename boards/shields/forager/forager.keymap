@@ -83,7 +83,7 @@
 
         base {
             bindings = <
-            &to ADJ         &kp W           &kp F           &out OUT_TOG    &bt BT_CLR_ALL                                  &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
+            &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
             &kp A           &lhm LCTRL R    &lhm LALT S     &lhm LGUI T     &kp G                                           &kp M           &rhm LGUI N     &rhm LALT E     &rhm LCTRL I    &kp O
             &kp Z           &kp X           &kp C           &kp D           &kp V                                           &kp K           &kp H           AS(COMMA)       AS(DOT)         AS(FSLH)
                                                                             &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
@@ -92,9 +92,9 @@
 
         nav {
             bindings = <
-            &trans          &trans          &trans          &trans          &trans                                          &kp PAGE_UP     &kp LC(PG_UP)   &kp UP          &kp LC(PG_DN)   &kp DELETE
-            &trans          &kp LCTRL       &kp LALT        &kp LGUI        &trans                                          &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &kp HOME        &kp END         &kp LC(SPACE)   &kp LC(SPACE)
+            &trans          &trans          &trans          &trans          &studio_unlock                                  &kp PAGE_UP     &kp LC(PG_UP)   &kp UP          &kp LC(PG_DN)   &kp DELETE
+            &trans          &kp LCTRL       &kp LALT        &kp LGUI        &kp Z                                           &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
+            &trans          &trans          &trans          &trans          &out OUT_BLE                                    &trans          &kp HOME        &kp END         &kp LC(SPACE)   &kp LC(SPACE)
                                                                             &mo SYM         &kp LSHFT       &trans          &trans
             >;
         };
