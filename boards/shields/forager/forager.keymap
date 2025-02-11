@@ -25,12 +25,20 @@
 // };
 
 / {
-    behaviors {
-        dt_kp: double_tap_keypress {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <30 33>;
+            bindings = <&kp ESC>;
+        };
+        combo_studio_unlock {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <8 9>;
+            bindings = <&studio_unlock>;
         };
     };
 
