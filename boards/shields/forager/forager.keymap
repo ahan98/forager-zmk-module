@@ -9,90 +9,22 @@
 #define ADJ  3
 #define MOD  4
 
-//  0  1  2  3  4      5  6  7  8  9
-// 10 11 12 13 14     15 16 17 18 19
-// 20 21 22 23 24     25 26 27 28 29
-//          30 31     32 33
+&lt {
+    // require-prior-idle-ms = <100>;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <200>;
+};
+
+&mt {
+    quick-tap-ms = <200>;
+};
+
+// &sk {
+//     release-after-ms = <500>;
+//     quick-release;
+// };
 
 / {
-    behaviors {
-        dt_kp: double_tap_keypress {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        // Home row mods (left)
-        combo_lctrl {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <13 14>;
-            bindings = <&kp LCTRL>;
-        };
-        combo_lgui {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-        combo_lshift_lctrl {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <12 13 14>;
-            bindings = <&kp LS(LCTRL)>;
-        };
-        combo_lshift_lgui {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <11 12 13>;
-            bindings = <&kp LS(LGUI)>;
-        };
-
-        // Home row mods (right)
-        combo_rctrl {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <15 16>;
-            bindings = <&kp RCTRL>;
-        };
-        combo_rgui {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <16 17>;
-            bindings = <&kp RGUI>;
-        };
-        combo_rshift_rctrl {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <15 16 17>;
-            bindings = <&kp RS(RCTRL)>;
-        };
-        combo_rshift_rgui {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <16 17 18>;
-            bindings = <&kp RS(RGUI)>;
-        };
-
-        // Keypresses
-        combo_esc {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <30 33>;
-            bindings = <&kp ESC>;
-        };
-        combo_studio_unlock {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <8 9>;
-            bindings = <&studio_unlock>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -143,18 +75,3 @@
         };
     };
 };
-
-&lt {
-    // require-prior-idle-ms = <100>;
-    tapping-term-ms = <150>;
-    quick-tap-ms = <200>;
-};
-
-&mt {
-    quick-tap-ms = <200>;
-};
-
-// &sk {
-//     release-after-ms = <500>;
-//     quick-release;
-// };
