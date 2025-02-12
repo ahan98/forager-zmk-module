@@ -37,25 +37,25 @@
         combo_lctrl {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
             bindings = <&kp LCTRL>;
         };
         combo_lgui {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <12 13>;
+            key-positions = <11 12>;
             bindings = <&kp LGUI>;
         };
         combo_lshift_lctrl {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <12 13 14>;
+            key-positions = <11 12 13>;
             bindings = <&kp LS(LCTRL)>;
         };
         combo_lshift_lgui {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <11 12 13>;
+            key-positions = <10 11 12>;
             bindings = <&kp LS(LGUI)>;
         };
 
@@ -63,25 +63,25 @@
         combo_rctrl {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
             bindings = <&kp RCTRL>;
         };
         combo_rgui {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <16 17>;
+            key-positions = <17 18>;
             bindings = <&kp RGUI>;
         };
         combo_rshift_rctrl {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <15 16 17>;
+            key-positions = <16 17 18>;
             bindings = <&kp RS(RCTRL)>;
         };
         combo_rshift_rgui {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <16 17 18>;
+            key-positions = <17 18 19>;
             bindings = <&kp RS(RGUI)>;
         };
 
@@ -97,6 +97,19 @@
             layers = <0>;
             key-positions = <8 9>;
             bindings = <&studio_unlock>;
+        };
+
+        combo_left_bootloader {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <0 1 2 3>;
+            bindings = <&bootloader>;
+        };
+        combo_right_bootloader {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <6 7 8 9>;
+            bindings = <&bootloader>;
         };
     };
 
@@ -117,7 +130,7 @@
             &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
             &trans  &trans  &trans  &kp LBKT  &kp LBRC              &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &kp RBKT  &kp RBRC              &trans  &trans  &trans  &trans  &trans
-                                    &trans    &to ADJ               &trans  &trans
+                                    &trans    &trans                &trans  &trans
             >;
         };
 
@@ -125,7 +138,7 @@
             bindings = <
             &trans  &trans &trans &trans   &trans                  &trans    &trans    &trans  &trans    &trans
             &kp TAB &trans &trans &kp HOME &kp PG_UP               &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &kp ESC
-            &trans  &trans &trans &kp END  &kp PG_DN               &trans    &trans    &trans  &trans    &trans
+            &trans  &trans &trans &kp END  &kp PG_DN               &trans    &kp LEFT  &trans  &trans    &trans
                                   &trans   &kp DEL                 &trans    &trans
             >;
         };
