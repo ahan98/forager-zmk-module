@@ -85,6 +85,14 @@
             bindings = <&kp RS(RGUI)>;
         };
 
+        // Sticky layer
+        combo_sl_adj {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <6 7 8 9>;
+            bindings = <&sl ADJ>;
+        };
+
         // Keypresses
         combo_esc {
             timeout-ms = <50>;
@@ -97,19 +105,6 @@
             layers = <0>;
             key-positions = <8 9>;
             bindings = <&studio_unlock>;
-        };
-
-        combo_left_bootloader {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <0 1 2 3>;
-            bindings = <&bootloader>;
-        };
-        combo_right_bootloader {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <6 7 8 9>;
-            bindings = <&bootloader>;
         };
     };
 
