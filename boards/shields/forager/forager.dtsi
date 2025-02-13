@@ -10,7 +10,7 @@
     keys {
         compatible = "gpio-keys";
         wakeup_key: wakeup_key {
-            gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         };
     };
 
@@ -20,7 +20,7 @@
         trigger = <&wakeup_key>;
         wakeup-source;
         extra-gpios
-            = <&gpio1 14 GPIO_ACTIVE_HIGH>
+            = <&gpio0 4 GPIO_ACTIVE_HIGH>
             ;
     };
 
