@@ -4,6 +4,8 @@
 / {
     /* SOFT OFF GPIO KEY */
 
+    // See: https://zmk.dev/docs/development/hardware-integration/soft-off-setup
+
     // Specify which MCU input pin to use for soft off. For col2row matrix, MCU
     // input pins are row pins.
     keys {
