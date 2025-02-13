@@ -13,6 +13,7 @@
     require-prior-idle-ms = <100>;
     tapping-term-ms = <150>;
     quick-tap-ms = <200>;
+    flavor = "tap-preferred";
 };
 
 &mt {
@@ -50,6 +51,12 @@
             key-positions = <11 12>;
             bindings = <&kp LGUI>;
         };
+        combo_lalt {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <10 11>;
+            bindings = <&kp LALT>;
+        };
         combo_lshift_lctrl {
             timeout-ms = <50>;
             layers = <0>;
@@ -75,6 +82,12 @@
             layers = <0>;
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <18 19>;
+            bindings = <&kp RALT>;
         };
         combo_rshift_rctrl {
             timeout-ms = <50>;
@@ -134,10 +147,10 @@
 
         nav {
             bindings = <
-            &trans  &trans &trans &trans   &trans                  &trans    &trans    &trans  &trans    &trans
-            &kp TAB &trans &trans &kp HOME &kp PG_UP               &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &kp ESC
-            &trans  &trans &trans &kp END  &kp PG_DN               &trans    &kp LEFT  &trans  &trans    &trans
-                                  &trans   &kp DEL                 &trans    &trans
+            &trans  &trans &trans   &trans    &trans               &trans    &trans    &trans  &trans    &trans
+            &kp TAB &trans &kp HOME &kp PG_UP &trans               &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &kp ESC
+            &trans  &trans &kp END  &kp PG_DN &trans               &trans    &kp LEFT  &trans  &trans    &trans
+                                    &trans    &kp DEL              &trans    &trans
             >;
         };
 
