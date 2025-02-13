@@ -116,7 +116,7 @@
 
         base {
             bindings = <
-            &kp B  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &kp COMMA
+            &soft_press  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &kp COMMA
             &kp N  &kp R  &kp T  &kp S      &kp G                     &kp Y    &kp H    &kp A      &kp E       &kp I
             &kp X  &kp Q  &kp M  &kp W      &kp Z                     &kp K    &kp P    &kp SQT    &kp SEMI    &kp DOT
                                  &kp SPACE  &mt LSHIFT BSPC           &mo SYM  &lt NAV RET
