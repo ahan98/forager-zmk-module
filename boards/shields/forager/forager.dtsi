@@ -30,7 +30,10 @@
     // Tell ZMK to wake up from soft off when wakeup_scan is pressed.
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_scan>;
+        wakeup-sources =
+          <&wakeup_scan>,
+          <&kscan0>
+          ;
     };
 
     chosen {
