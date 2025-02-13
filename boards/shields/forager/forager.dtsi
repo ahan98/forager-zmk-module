@@ -7,15 +7,32 @@
         zmk,physical-layout = &default_layout;
     };
 
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
+    keys {
+        compatible = "gpio-keys";
+        wakeup_key: wakeup_key {
+            gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+
+        trigger = <&wakeup_key>;
         wakeup-source;
+        extra-gpios
+            = <&gpio1 14 GPIO_ACTIVE_HIGH>
+            ;
     };
 
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
+        wakeup-sources = <&wakeup_source>;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
     };
 
     default_layout: default_layout {
