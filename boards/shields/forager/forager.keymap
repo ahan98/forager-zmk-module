@@ -20,16 +20,16 @@
     quick-tap-ms = <200>;
 };
 
-/* &soft_off { */
-/*     hold-time-ms = <5000>; // Activate soft off after holding for 5 secs. */
-/* }; */
-
-// &sk {
-//     release-after-ms = <500>;
-//     quick-release;
-// };
+&soft_off {
+    hold-time-ms = <3000>;
+};
 
 / {
+    soft_off_wakers {
+      compatible = "zmk,soft-off-wakeup-sources";
+      wakeup-sources = <&kscan0>;
+    };
+
     combos {
         //  0  1  2  3  4      5  6  7  8  9
         // 10 11 12 13 14     15 16 17 18 19
@@ -129,7 +129,7 @@
 
         base {
             bindings = <
-            &kp B  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &kp COMMA
+            &kp B  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &soft_off
             &kp N  &kp R  &kp T  &kp S      &kp G                     &kp Y    &kp H    &kp A      &kp E       &kp I
             &kp X  &kp Q  &kp M  &kp W      &kp Z                     &kp K    &kp P    &kp SQT    &kp SEMI    &kp DOT
                                  &kp SPACE  &mt LSHIFT BSPC           &mo SYM  &lt NAV RET
