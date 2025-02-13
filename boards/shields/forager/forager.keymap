@@ -25,9 +25,35 @@
 };
 
 / {
+    /* SOFT OFF GPIO KEY */
+
+    // See: https://zmk.dev/docs/development/hardware-integration/soft-off-setup
+
+    // Specify which MCU input pin to use for soft off. For col2row matrix, MCU
+    // input pins are row pins.
+    keys {
+        compatible = "gpio-keys";
+        soft_off_gpio_key: soft_off_gpio_key {
+            gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    /* SOFT OFF WAKER */
+
+    // Specify which key(s) are enabled in soft off state. The extra-gpios
+    // property contains MCU output pins of any keys used to wake the keyboard.
+    // For col2row matrix, MCU output pins are column pins.
+    wakeup_scan: wakeup_scan {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+        extra-gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
+    };
+
+    // Specify which keys wake up the keyboard from soft off state.
     soft_off_wakers {
-      compatible = "zmk,soft-off-wakeup-sources";
-      wakeup-sources = <&kscan0>;
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_scan>;
     };
 
     combos {
@@ -129,10 +155,10 @@
 
         base {
             bindings = <
-            &kp B  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &soft_off
+            &kp B  &kp L  &kp D  &kp C      &kp V                     &kp J    &kp F    &kp O      &kp U       &kp COMMA
             &kp N  &kp R  &kp T  &kp S      &kp G                     &kp Y    &kp H    &kp A      &kp E       &kp I
             &kp X  &kp Q  &kp M  &kp W      &kp Z                     &kp K    &kp P    &kp SQT    &kp SEMI    &kp DOT
-                                 &kp SPACE  &mt LSHIFT BSPC           &mo SYM  &lt NAV RET
+                                 &kp SPACE  &mt LSHIFT BSPC           &soft_off  &lt NAV RET
             >;
         };
 
