@@ -19,9 +19,9 @@
     quick-tap-ms = <200>;
 };
 
-&soft_off {
-    hold-time-ms = <5000>; // Activate soft off after holding for 5 secs.
-};
+/* &soft_off { */
+/*     hold-time-ms = <5000>; // Activate soft off after holding for 5 secs. */
+/* }; */
 
 // &sk {
 //     release-after-ms = <500>;
@@ -89,15 +89,12 @@
             bindings = <&kp RS(RGUI)>;
         };
 
-        // Layers
-        combo_to_adj {
-            timeout-ms = <50>;
+        // Keypresses
+        combo_soft_off {
             layers = <0>;
             key-positions = <6 7 8 9>;
-            bindings = <&to ADJ>;
+            bindings = <&soft_off>;
         };
-
-        // Keypresses
         combo_esc {
             timeout-ms = <50>;
             layers = <0>;
