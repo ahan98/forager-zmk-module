@@ -89,20 +89,15 @@
             bindings = <&kp RS(RGUI)>;
         };
 
-        // Sticky layer
-        combo_sl_adj {
+        // Layers
+        combo_to_adj {
             timeout-ms = <50>;
             layers = <0>;
             key-positions = <6 7 8 9>;
-            bindings = <&sl ADJ>;
+            bindings = <&to ADJ>;
         };
 
         // Keypresses
-        /* combo_soft_off { */
-        /*     layers = <ADJ>; */
-        /*     key-positions = <0>; */
-        /*     bindings = <&soft_off>; */
-        /* }; */
         combo_esc {
             timeout-ms = <50>;
             layers = <0>;
