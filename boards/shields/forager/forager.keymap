@@ -19,9 +19,9 @@
     quick-tap-ms = <200>;
 };
 
-/* &soft_off { */
-/*     hold-time-ms = <5000>; // Activate soft off after holding for 5 secs. */
-/* }; */
+&soft_off {
+    hold-time-ms = <5000>; // Activate soft off after holding for 5 secs.
+};
 
 // &sk {
 //     release-after-ms = <500>;
@@ -97,11 +97,6 @@
         };
 
         // Keypresses
-        combo_soft_off {
-            layers = <ADJ>;
-            key-positions = <6 7 8 9>;
-            bindings = <&soft_off>;
-        };
         combo_esc {
             timeout-ms = <50>;
             layers = <0>;
@@ -151,7 +146,7 @@
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL          &trans      &kp C_BRI_DN  &kp C_BRI_UP  &trans  &trans
             &studio_unlock  &trans          &trans          &trans          &trans                  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans
             &bootloader     &trans          &trans          &trans          &trans                  &trans      &trans        &trans        &trans  &bootloader
-                                                            &trans          &to BASE                &trans      &trans
+                                                            &soft_off       &to BASE                &trans      &trans
             >;
         };
 
