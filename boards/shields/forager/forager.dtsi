@@ -7,28 +7,6 @@
         zmk,physical-layout = &default_layout;
     };
 
-    keys {
-        compatible = "gpio-keys";
-        wakeup_key: wakeup_key {
-            gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        };
-    };
-
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-
-        trigger = <&wakeup_key>;
-        wakeup-source;
-        extra-gpios
-            = <&gpio0 4 GPIO_ACTIVE_HIGH>
-            ;
-    };
-
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
-    };
-
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
